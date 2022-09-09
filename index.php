@@ -3,7 +3,7 @@ session_start();
 include('includes/config.php');
 error_reporting(0);
 
-?> 
+?>
 
 
 <!DOCTYPE html>
@@ -157,7 +157,7 @@ error_reporting(0);
       </div>
     </div>
     <!-- /.mobile-menu -->
-    <nav id="menu" class="stylehome1">
+    <!-- <nav id="menu" class="stylehome1">
       <ul>
         <li><span>Home</span>
           <ul>
@@ -253,7 +253,7 @@ error_reporting(0);
           </ul>
         </li>
         <!-- Only for Mobile View -->
-        <li class="mm-add-listing">
+        <!-- <li class="mm-add-listing">
           <span class="border-none">
             <span class="mmenu-contact-info">
               <span class="phone-num"><i class="flaticon-map"></i> <a href="#">47 Bakery Street, London, UK</a></span>
@@ -269,8 +269,8 @@ error_reporting(0);
             </span>
           </span>
         </li>
-      </ul>
-    </nav>
+      </ul> -->
+    <!-- </nav>  -->
   </div>
   
   <!-- Home Design -->

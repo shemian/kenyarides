@@ -23,7 +23,7 @@
           <li> <a href="page-faq.html"><span class="title">FAQs</span></a></li>
           <li> <a href="page-contact.html"><span class="title">Contact Us</span></a></li>
 
-          <li> <a href="#"><span class="title">User Info</span></a>
+          <li> <a href="#"><span class="title"><i class="fa fa-user" aria-hidden="true"></i></span></a>
               <ul>
                 <li><a href="page-dashboard.html">Dashboard</a></li>
                 <li><a href="page-dashboard-profile.html">Profile</a></li>
