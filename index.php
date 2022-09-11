@@ -25,34 +25,14 @@ error_reporting(0);
 <body>
 <div class="wrapper ovh">
   <div class="preloader"></div>
-  <!-- Sidebar Panel Start -->
-  <div class="listing_sidebar">
-    <div class="siderbar_left_home pt20">
-      <a class="sidebar_switch sidebar_close_btn float-end" href="#">X</a>
-      <div class="footer_contact_widget mt100">
-        <h3 class="title">Quick contact info</h3>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis parturient montes, nascetur.</p>
-      </div>
-      <div class="footer_contact_widget">
-        <h5 class="title">CONTACT</h5>
-        <div class="footer_phone">+1 670 936 46 70</div>
-        <p>hello@voiture.com</p>
-      </div>
-      <div class="footer_about_widget">
-        <h5 class="title">OFFICE</h5>
-        <p>Germany —<br>329 Queensberry Street,<br>North Melbourne VIC 3051</p>
-      </div>
-      <div class="footer_contact_widget">
-        <h5 class="title">OPENING HOURS</h5>
-        <p>Monday – Friday: 09:00AM – 09:00PM<br>Saturday: 09:00AM – 07:00PM<br>Sunday: Closed</p>
-      </div>
-    </div>
-  </div>
+ 
   <!-- Sidebar Panel End -->
   <?php include('includes/header.php') ?>
   
   <!-- Main Header Nav -->
-  <?php  include('includes/navbar.php') ?>
+  <header class="header-nav menu_style_home_one transparent main-menu">
+     <?php  include('includes/navbar.php') ?>
+</header>
 
   <!-- Modal -->
   <div class="sign_up_modal modal fade" id="logInModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-hidden="true">
@@ -83,6 +63,37 @@ error_reporting(0);
       </div>
     </div>
   </div>
+    
+  <!-- login and registration forms  -->
+  <div class="sign_up_modal modal fade" id="logInModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body container p60">
+          <div class="row">
+            <div class="col-lg-12">
+              <ul class="sign_up_tab nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#loginform" role="tab" aria-controls="home" aria-selected="true">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#regform" role="tab" aria-controls="profile" aria-selected="false">Register</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-content container p0" id="myTabContent">
+          <?php include('includes/login.php')?>
+          <?php include('includes/register.php')?>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   
   <!-- Main Header Nav For Mobile -->
   <div id="page" class="stylehome1 h0">

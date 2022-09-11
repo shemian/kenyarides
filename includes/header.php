@@ -18,8 +18,12 @@
               <li class="list-inline-item"><a href="#"><span class="fab fa-twitter"></span></a></li>
               <li class="list-inline-item"><a href="#"><span class="fab fa-instagram"></span></a></li>
               <li class="list-inline-item"><a href="#"><span class="fab fa-linkedin"></span></a></li>
+              <?php  if($_SESSION['login']){?>
+                <!-- <li class="list-inline-item"><a href="#loginform" data-bs-toggle="modal" data-bs-target="#logInModal">Logged In </a></li> -->
+                <?php } else { ?>
               <li class="list-inline-item"><a href="#loginform" data-bs-toggle="modal" data-bs-target="#logInModal">Login</a></li>
               <li class="list-inline-item"><a href="#regform" data-bs-toggle="modal" data-bs-target="#logInModal">Register</a></li>
+              <?php }  ?>
             </ul>
           </div>
         </div>

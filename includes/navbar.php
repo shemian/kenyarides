@@ -1,6 +1,5 @@
-<header class="header-nav menu_style_home_one transparent main-menu">
-    <!-- Ace Responsive Menu -->
-    <nav> 
+
+    <nav > 
       <div class="container posr"> 
         <!-- Menu Toggle btn-->
         <div class="menu-toggle">
@@ -15,9 +14,9 @@
           <img class="logo2 img-fluid" src="images/header-logo2.svg" alt="header-logo2.svg">
 				</a>
         <!-- Responsive Menu Structure-->
-        <ul id="respMenu" class="ace-responsive-menu text-end" data-menu-style="horizontal">
+        <ul id="respMenu" class="ace-responsive-menu menu_list_custom_code wa text-end" data-menu-style="horizontal">
           <li> <a href="index.php"><span class="title">Home</span></a></li>
-          <li> <a href="#"><span class="title">List A car</span></a></li>
+          <li> <a href="post_vehicle.php"><span class="title">List A car</span></a></li>
           <li> <a href="#"><span class="title">Listings</span></a></li>
           <li> <a href="page-about.html"><span class="title">About Us</span></a></li>
           <li> <a href="page-faq.html"><span class="title">FAQs</span></a></li>
@@ -67,4 +66,3 @@
         </ul>
       </div>
     </nav>
-  </header>
