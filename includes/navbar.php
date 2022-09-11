@@ -23,7 +23,22 @@
           <li> <a href="page-faq.html"><span class="title">FAQs</span></a></li>
           <li> <a href="page-contact.html"><span class="title">Contact Us</span></a></li>
 
-          <li> <a href="#"><span class="title"><i class="fa fa-user" aria-hidden="true"></i></span></a>
+          
+          <?php
+          $email=$_SESSION['login'];
+          $sql = "SELECT FullName FROM tblusers WHERE EmailId=:email";
+
+          $query= $dbh -> prepare($sql);
+          $query-> bindParam(':email', $email, PDO::PARAM_STR);
+          $query-> execute();
+          $results=$query->fetchAll(PDO::FETCH_OBJ);
+          if($query->rowCount() > 0)
+          {
+            foreach($results as $result) {
+             ?>
+
+            <li> <a href="#"  class="fa fa-user  " >  <span class="title"><?php echo htmlentities( $result->FullName); }}?><i  aria-hidden="true"></i></span></a>
+            <?php  if($_SESSION['login']){?>
               <ul>
                 <li><a href="page-dashboard.html">Dashboard</a></li>
                 <li><a href="page-dashboard-profile.html">Profile</a></li>
@@ -31,14 +46,23 @@
                 <li><a href="page-dashboard-favorites.html">Favorites</a></li>
                 <li><a href="page-dashboard-add-listings.html">Add Listing</a></li>
                 <li><a href="page-dashboard-messages.html">Messages</a></li>
-                <li><a href="page-login.html">Logout</a></li>
+                <li><a href="logout.php">Logout</a></li>
               </ul>
+              <?php } else { ?>
+
+
+                <?php } ?>
           </li>
           
          
           </li>
+          <?php if($_SESSION['login']) {?>
          
           <li class="add_listing"><a href="page-dashboard-add-listings.html">+ Add Listing</a></li>
+          <?php } else { ?>
+            <li class="add_listing"><a href="#logInModal" data-bs-target="#logInModal">Login to List</a></li>
+          <?php } ?>
+
           <li class="sidebar_panel"><a class="sidebar_switch pt0" href="#"><span></span></a></li>
         </ul>
       </div>
