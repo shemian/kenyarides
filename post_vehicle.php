@@ -10,12 +10,13 @@ if(strlen($email = $_SESSION['login'])){
  if(isset($_POST['submit']))
  {
     $vehicletitle=$_POST['vehicletitle'];
-    $brand=$_POST['brandname'];
+    if(isset($_POST['vehcondition'])) $vehcondition = $_POST['vehcondition'];
     $vehcondition="";
-    if(isset($_POST['vehcondition'])) $airconditioner = $_POST['vehcondition'];
+    if(isset($_POST['vehcondition'])) $vehcondition = $_POST['vehcondition'];
     $vehicleoverview=$_POST['vehicaloverview'];
     $priceperday=$_POST['priceperday'];
     $fueltype=$_POST['fueltype'];
+    $vehbrand=$_POST['vehbrand'];
     $modelyear=$_POST['modelyear'];
     $seatingcapacity=$_POST['seatingcapacity'];
     $img=$_FILES["img"]["name"];
@@ -23,35 +24,35 @@ if(strlen($email = $_SESSION['login'])){
     $airconditioner="";
     if(isset($_POST['airconditioner'])) $airconditioner = $_POST['airconditioner'];
     $powerdoorlocks="";
-    if(isset($_POST['powerdoorlocks'])) $airconditioner = $_POST['powerdoorlocks'];
+    if(isset($_POST['powerdoorlocks'])) $powerdoorlocks = $_POST['powerdoorlocks'];
     $antilockbrakingsys="";
-    if(isset($_POST['antilockbrakingsys'])) $airconditioner = $_POST['antilockbrakingsys'];
+    if(isset($_POST['antilockbrakingsys'])) $antilockbrakingsys = $_POST['antilockbrakingsys'];
     $brakeassist="";
-    if(isset($_POST['brakeassist'])) $airconditioner = $_POST['brakeassist'];
+    if(isset($_POST['brakeassist'])) $brakeassist = $_POST['brakeassist'];
     $powersteering="";
-    if(isset($_POST['powersteering'])) $airconditioner = $_POST['powersteering'];
+    if(isset($_POST['powersteering'])) $powersteering = $_POST['powersteering'];
     $driverairbag="";
-    if(isset($_POST['driverairbag'])) $airconditioner = $_POST['driverairbag'];  
+    if(isset($_POST['driverairbag'])) $driverairbag = $_POST['driverairbag'];  
     $passengerairbag="";
-    if(isset($_POST['passengerairbag'])) $airconditioner = $_POST['passengerairbag'];
+    if(isset($_POST['passengerairbag'])) $passengerairbag= $_POST['passengerairbag'];
     $powerwindow="";
-    if(isset($_POST['powerwindow'])) $airconditioner = $_POST['powerwindow'];
+    if(isset($_POST['powerwindow'])) $powerwindow = $_POST['powerwindow'];
     $cdplayer="";
-    if(isset($_POST['cdplayer'])) $airconditioner = $_POST['cdplayer'];
+    if(isset($_POST['cdplayer'])) $cdplayer = $_POST['cdplayer'];
     $centrallocking="";
-    if(isset($_POST['centrallocking'])) $airconditioner = $_POST['centrallocking'];
+    if(isset($_POST['centrallocking'])) $centrallocking = $_POST['centrallocking'];
     $crashcensor="";
-    if(isset($_POST['crashcensor'])) $airconditioner = $_POST['crashcensor'];
+    if(isset($_POST['crashcensor'])) $crashcensor = $_POST['crashcensor'];
     $leatherseats="";
-    if(isset($_POST['leatherseats'])) $airconditioner = $_POST['leatherseats'];
+    if(isset($_POST['leatherseats'])) $leatherseats = $_POST['leatherseats'];
    
     move_uploaded_file($_FILES["img"]["tmp_name"],"image/vehicleimages/".$_FILES["img"]["name"]);
 
-    $sql="INSERT INTO tblvehicles(VehiclesTitle,user_id,VehiclesBrand,Vehcondition,VehiclesOverview,PricePerDay,FuelType,ModelYear,SeatingCapacity,Vehimg,AirConditioner,PowerDoorLocks,AntiLockBrakingSystem,BrakeAssist,PowerSteering,DriverAirbag,PassengerAirbag,PowerWindows,CentralLocking,CrashSensor,LeatherSeats,CDPlayer) VALUES(:vehicletitle,:user_id,:brand,:vehcondition,:vehicleoverview,:priceperday,:fueltype,:modelyear,:seatingcapacity,:img,:airconditioner,:powerdoorlocks,:antilockbrakingsys,:brakeassist,:powersteering,:driverairbag,:passengerairbag,:powerwindow,:centrallocking,:crashcensor,:leatherseats,:cdplayer)";
+    $sql="INSERT INTO tblvehicles(VehiclesTitle,user_id,Vehbrand,Vehcondition,VehiclesOverview,PricePerDay,FuelType,ModelYear,SeatingCapacity,Vehimg,AirConditioner,PowerDoorLocks,AntiLockBrakingSystem,BrakeAssist,PowerSteering,DriverAirbag,PassengerAirbag,PowerWindows,CentralLocking,CrashSensor,LeatherSeats,CDPlayer) VALUES(:vehicletitle,:user_id,:vehbrand,:vehcondition,:vehicleoverview,:priceperday,:fueltype,:modelyear,:seatingcapacity,:img,:airconditioner,:powerdoorlocks,:antilockbrakingsys,:brakeassist,:powersteering,:driverairbag,:passengerairbag,:powerwindow,:centrallocking,:crashcensor,:leatherseats,:cdplayer)";
     $query = $dbh->prepare($sql);
     $query->bindParam(':vehicletitle',$vehicletitle,PDO::PARAM_STR);
     $query->bindParam(':user_id',$user_id,PDO::PARAM_STR);
-    $query->bindParam(':brand',$brand,PDO::PARAM_STR);
+    $query->bindParam(':vehbrand',$vehbrand,PDO::PARAM_STR);
     $query->bindParam(':vehcondition',$vehcondition,PDO::PARAM_STR);
     $query->bindParam(':vehicleoverview',$vehicleoverview,PDO::PARAM_STR);
     $query->bindParam(':priceperday',$priceperday,PDO::PARAM_STR);
@@ -159,8 +160,8 @@ if(strlen($email = $_SESSION['login'])){
                                                 <label class="form-label">Condition</label>
                                                 <select name="vehcondition" class="selectpicker" data-live-search="true" data-width="100%">
                                                     <option>Select</option>
-                                                    <option value="new">New</option>
-                                                    <option value="used">Used</option>
+                                                    <option data-tokens="New" value="New">New</option>
+                                                    <option data-tokens="Used" value="Used">Used</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -173,14 +174,14 @@ if(strlen($email = $_SESSION['login'])){
                                         <div class="col-sm-6 col-md-4">
                                             <div class="ui_kit_select_search add_new_property mb20">
                                                 <label class="form-label">Brand</label>
-                                                <select class="selectpicker" name="brandname" data-live-search="true" data-width="100%">
+                                                <select class="selectpicker" name="vehbrand" data-live-search="true" data-width="100%">
                                                     <option>Select</option>
-                                                    <option value="Audi">Audi</option>
-                                                    <option value="Bentley">Bentley</option>
-                                                    <option value="BMW">BMW</option>
-                                                    <option value="Ford">Ford</option>
-                                                    <option value="Honda">Honda</option>
-                                                    <option value="Mercedes">Mercedes</option>
+                                                    <option data-tokens="Audi" value="Audi">Audi</option>
+                                                    <option data-tokens="Bentley" value="Bentley">Bentley</option>
+                                                    <option data-tokens="BMW" value="BMW">BMW</option>
+                                                    <option data-tokens="Ford" value="Ford">Ford</option>
+                                                    <option data-tokens="Honda" value="Honda">Honda</option>
+                                                    <option data-tokens="Mercedes" value="Mercedes">Mercedes</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -189,11 +190,9 @@ if(strlen($email = $_SESSION['login'])){
                                                 <label class="form-label">Fuel Type</label>
                                                 <select class="selectpicker" name="fueltype" data-live-search="true" data-width="100%">
                                                     <option>Select</option>
-                                                    <option data-tokens="Fuel Type" value="1">Fuel Type</option>
-                                                    <option data-tokens="Diesel" value="2">Diesel</option>
-                                                    <option data-tokens="Electric" value="3">Electric</option>
-                                                    <option data-tokens="Hybrid" value="4">Hybrid</option>
-                                                    <option data-tokens="Petrol" value="5">Petrol</option>
+                                                    <option data-tokens="Diesel" value="Diesel">Diesel</option>
+                                                    <option data-tokens="Electric" value="Electric">Electric</option>
+                                                    <option data-tokens="Petrol" value="Petrol">Petrol</option>
                                                 </select>
                                             </div>
                                         </div>
