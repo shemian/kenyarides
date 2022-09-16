@@ -229,8 +229,8 @@ error_reporting(0);
         <div class="col-lg-10 m-auto">
           <div class="home_content home1_style">
             <div class="home-text text-center mb30">
-              <h2 class="title"><span class="aminated-object1"><img class="objects" src="images/home/title-bottom-border.svg" alt=""></span>Find Your Next Match</h2>
-              <p class="para">Find the right price, dealer and advice.</p>
+              <h2 class="title"><span class="aminated-object1"><img class="objects" src="images/home/title-bottom-border.svg" alt=""></span>Kenya Safari Cars</h2>
+              <p class="para">Find the right Safari Car.</p>
             </div>
             <div class="advance_search_panel">
               <div class="row">
@@ -485,18 +485,6 @@ error_reporting(0);
                       <div class="thumb">
                         <div class="tag">FEATURED</div>
                         <img src="image/vehicleimages/<?php echo htmlentities($result->Vehimg);?>" alt="1.jpg">
-                        <div class="thmb_cntnt2">
-                          <ul class="mb0">
-                            <li class="list-inline-item"><a class="text-white" href="#"><span class="flaticon-photo-camera mr3"></span> 22</a></li>
-                            <li class="list-inline-item"><a class="text-white" href="#"><span class="flaticon-play-button mr3"></span> 3</a></li>
-                          </ul>
-                        </div>
-                        <div class="thmb_cntnt3">
-                          <ul class="mb0">
-                            <li class="list-inline-item"><a href="#"><span class="flaticon-shuffle-arrows"></span></a></li>
-                            <li class="list-inline-item"><a href="#"><span class="flaticon-heart"></span></a></li>
-                          </ul>
-                        </div>
                       </div>
                       <div class="details">
                         <div class="wrapper">
