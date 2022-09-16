@@ -36,12 +36,12 @@
             foreach($results as $result) {
              ?>
 
-            <li> <a href="#"  class="fa fa-user  " >  <span class="title"><?php echo htmlentities( $result->FullName); }}?><i  aria-hidden="true"></i></span></a>
+            <li> <a href="#"  class="fa fa-user"><span class="title"><?php echo htmlentities( $result->FullName); }}?></span></a>
             <?php  if($_SESSION['login']){?>
               <ul>
                 <li><a href="page-dashboard.html">Dashboard</a></li>
                 <li><a href="page-dashboard-profile.html">Profile</a></li>
-                <li><a href="page-dashboard-listing.html">My Listing</a></li>
+                <li><a href="user_listing.php">My Listing</a></li>
                 <li><a href="page-dashboard-favorites.html">Favorites</a></li>
                 <li><a href="page-dashboard-add-listings.html">Add Listing</a></li>
                 <li><a href="page-dashboard-messages.html">Messages</a></li>
@@ -55,6 +55,7 @@
           
          
           </li>
+          
           <?php if($_SESSION['login']) {?>
          
           <li class="add_listing"><a href="page-dashboard-add-listings.html">+ Add Listing</a></li>
