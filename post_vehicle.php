@@ -199,7 +199,7 @@ if(strlen($email = $_SESSION['login'])){
                                         <div class="col-sm-6 col-md-4">
                                           
                                             <div class="mb20">
-                                                <label class="form-label">Price Per Day (USD)</label>
+                                                <label class="form-label">Price Per Day (KSH)</label>
                                                 <input name="priceperday" class="form-control form_control" type="text" placeholder="9">
                                             </div>
                                             
@@ -255,7 +255,7 @@ if(strlen($email = $_SESSION['login'])){
                                                         <div class="df mb20">
                                                             <input type="checkbox" class="custom-control-input" id="cdplayer" name="cdplayer" value="1">
                                                             <label class="custom-control-label" for="cdplayer">CD Player</label>
-                                                        </div>
+                                                        </div><!-- to be removed -->
                                                         <div class="df">
                                                             <input type="checkbox" class="custom-control-input" id="powersteering" name="powersteering" value="1">
                                                             <label class="custom-control-label" for="powersteering">Power Steering </label>

@@ -18,9 +18,8 @@
           <li> <a href="index.php"><span class="title">Home</span></a></li>
           <li> <a href="post_vehicle.php"><span class="title">List A car</span></a></li>
           <li> <a href="#"><span class="title">Listings</span></a></li>
-          <li> <a href="page-about.html"><span class="title">About Us</span></a></li>
-          <li> <a href="page-faq.html"><span class="title">FAQs</span></a></li>
-          <li> <a href="page-contact.html"><span class="title">Contact Us</span></a></li>
+         
+          <li> <a href="#"><span class="title">Contact Us</span></a></li>
 
           
           <?php
@@ -58,7 +57,7 @@
           
           <?php if($_SESSION['login']) {?>
          
-          <li class="add_listing"><a href="page-dashboard-add-listings.html">+ Add Listing</a></li>
+          <li class="add_listing"><a href="post_vehicle.php">+ Add Listing</a></li>
           <?php } else { ?>
             <li class="add_listing"><a href="#logInModal" data-bs-target="#logInModal">Login to List</a></li>
           <?php } ?>
