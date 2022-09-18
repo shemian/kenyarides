@@ -5,8 +5,8 @@
         <div class="col-lg-8 col-xl-7">
           <div class="header_top_contact_opening_widget text-center text-md-start">
             <ul class="mb0">
-              <li class="list-inline-item"><a href="#"><span class="flaticon-phone-call"></span>1-800-458-56987</a></li>
-              <li class="list-inline-item"><a href="#"><span class="flaticon-map"></span>47 Bakery Street, London, UK</a></li>
+              <li class="list-inline-item"><a href="#"><span class="flaticon-phone-call"></span>+254 740 241 08</a></li>
+              <li class="list-inline-item"><a href="#"><span class="flaticon-map"></span>Nairobi Kenya</a></li>
               <li class="list-inline-item"><a href="#"><span class="flaticon-clock"></span>Mon - Fri 8:00 - 18:00</a></li>
             </ul>
           </div>
