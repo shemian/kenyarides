@@ -119,81 +119,34 @@ foreach($results as $result)
                   <ul class="list-group">
                     <li class="list-group-item d-flex justify-content-between align-items-start">
                       <div class="me-auto">
-                        <div class="day">Make</div>
+                        <div class="day">Brand</div>
                       </div>
-                      <span class="schedule">Volvo</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                      <div class="me-auto">
-                        <div class="day">Model</div>
-                      </div>
-                      <span class="schedule">XC 90</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                      <div class="me-auto">
-                        <div class="day">Color</div>
-                      </div>
-                      <span class="schedule">white</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                      <div class="me-auto">
-                        <div class="day">Drive Type</div>
-                      </div>
-                      <span class="schedule">4x4</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                      <div class="me-auto">
-                        <div class="day">Transmission</div>
-                      </div>
-                      <span class="schedule">Automatic</span>
+                      <span class="schedule"><?php echo htmlentities($result->Vehbrand);?></span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-start">
                       <div class="me-auto">
                         <div class="day">Condition</div>
                       </div>
-                      <span class="schedule">Used</span>
+                      <span class="schedule"><?php echo htmlentities($result->Vehcondition);?></span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-start">
                       <div class="me-auto">
-                        <div class="day">Year</div>
+                        <div class="day">Siting Capacity</div>
                       </div>
-                      <span class="schedule">2021</span>
+                      <span class="schedule"><?php echo htmlentities($result->SeatingCapacity);?></span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-start">
                       <div class="me-auto">
-                        <div class="day">Mileage</div>
+                        <div class="day">Model Year</div>
                       </div>
-                      <span class="schedule">280,000</span>
+                      <span class="schedule"><?php echo htmlentities($result->ModelYear);?></span>
                     </li>
+                    
                     <li class="list-group-item d-flex justify-content-between align-items-start">
                       <div class="me-auto">
                         <div class="day">Fuel Type</div>
                       </div>
-                      <span class="schedule">Diesel</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                      <div class="me-auto">
-                        <div class="day">Engine Size</div>
-                      </div>
-                      <span class="schedule">5.2L</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                      <div class="me-auto">
-                        <div class="day">Doors</div>
-                      </div>
-                      <span class="schedule">5</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                      <div class="me-auto">
-                        <div class="day">Cylinders</div>
-                      </div>
-                      <span class="schedule">10</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                      <div class="me-auto">
-                        <div class="day">VIN</div>
-                      </div>
-                      <span class="schedule">2D456THA798700213GT21</span>
+                      <span class="schedule"><?php echo htmlentities($result->FuelType);?></span>
                     </li>
                   </ul>
                 </div>
@@ -201,10 +154,8 @@ foreach($results as $result)
             </div>
             <div class="col-lg-12">
               <div class="listing_single_description mt30">
-                <h4 class="mb30">Description <span class="float-end body-color fz13">ID #9535</span></h4>
-                <p class="first-para">The all-new Volvo XC60 is a terrific luxury compact SUV. It's been fully redesigned for 2017 and features improvements across the board. These changes bump the vehicle from its previous midpack standing; it now resides with some of the best in the class. Some of the most notable improvements include a state-of-the-art infotainment system, more legroom for rear-seat riders, and peppy engine choices.</p>
-                <p class="mb25">Occupying over 8,000 square feet, perched over 1,100 feet in the air with absolutely breathtaking panoramic 360-degree views of all of New York City and the surrounding tri-state area, The 82nd Floor at 432 Park Avenue has been completely reimagined by one of the most sought-after design houses in London and represents an utterly unique opportunity to own a globally significant property.</p>
-                <p class="mt10 mb20">The Amrutha Lounge means port in the Turkish language, however the restaurant opens its doors to all aspects of the Mediterranean kitchen. The kitchen will be mostly focused on Mediterranean food; the owners of the restaurant are young professional chefs who can bring new, exciting tastes to Angel, Islington which will show through in the quality of food they prepare.</p>
+                <h6>Overview</h6>
+                <p><?php echo htmlentities($result->VehiclesOverview);?></p>
               </div>
             </div>
             <div class="col-lg-12">
@@ -214,39 +165,54 @@ foreach($results as $result)
                     <h4 class="title">Features</h4>
                   </div>
                   <div class="col-lg-6 col-xl-6">
-                    <h5 class="subtitle">Convenience</h5>
+                    <h5 class="subtitle">Security</h5>
                   </div>
                   <div class="col-lg-6 col-xl-5">
                     <ul class="service_list">
-                      <li>Heated Seats</li>
-                      <li>Heated Steering Wheel</li>
-                      <li>Navigation System</li>
-                      <li>Power Liftgate</li>
+                      <?php if($result->AirConditioner==1){?>
+                      <li>Air Conditioner</li>
+                      <?php } else?> 
+                      <?php if($result->PowerDoorLocks==1){?>
+                      <li>Power Door Locks</li>
+                      <?php } else?> 
+                      <?php if($result->AntiLockBrakingSystem==1){?>
+                      <li>Anti breaking System</li>
+                      <?php } else?> 
+                      <?php if($result->PowerWindows==1){?>
+                      <li>Power Window</li>
+                      <?php } else?>
                     </ul>
                   </div>
                 </div>
                 <hr>
                 <div class="row">
                   <div class="col-lg-6 col-xl-6">
-                    <h5 class="subtitle">Entertainment</h5>
+                    <h5 class="subtitle">Comfort</h5>
                   </div>
                   <div class="col-lg-6 col-xl-5">
                     <ul class="service_list">
-                      <li>Apple CarPlay/Android Auto</li>
-                      <li>Bluetooth</li>
-                      <li>HomeLink</li>
+                    <?php if($result->BrakeAssist==1){?>
+                      <li>Break Assist</li>
+                      <?php } else?>
+                      <?php if($result->PowerSteering==1){?>
+                      <li>power Sterring</li>
+                      <?php } else?>
                     </ul>
                   </div>
                 </div>
                 <hr>
                 <div class="row">
                   <div class="col-lg-6 col-xl-6">
-                    <h5 class="subtitle">Exterior</h5>
+                    <h5 class="subtitle">Interior</h5>
                   </div>
                   <div class="col-lg-6 col-xl-5">
                     <ul class="service_list">
-                      <li>Alloy Wheels</li>
-                      <li>Sunroof/Moonroof</li>
+                    <?php if($result->DriverAirbag==1){?>
+                      <li>Driver Airbag</li>
+                      <?php } else?>
+                      <?php if($result->PassengerAirbag==1){?>
+                      <li>Passanger Airbag</li>
+                      <?php } else?>
                     </ul>
                   </div>
                 </div>
@@ -257,11 +223,15 @@ foreach($results as $result)
                   </div>
                   <div class="col-lg-6 col-xl-5">
                     <ul class="service_list">
-                      <li>Backup Camera</li>
-                      <li>Blind Spot Monitor</li>
-                      <li>Brake Assist</li>
-                      <li>LED Headlights</li>
-                      <li>Stability Control</li>
+                    <?php if($result->CentralLocking==1){?>
+                      <li>Central Looking</li>
+                      <?php } else?>
+                      <?php if($result->CrashSensor==1){?>
+                      <li>Crash Censor</li>
+                      <?php } else?>
+                      <?php if($result->LeatherSeats==1){?>
+                      <li>Leather Seats</li>
+                      <?php } else?>
                     </ul>
                   </div>
                 </div>
@@ -298,7 +268,7 @@ foreach($results as $result)
                 </div>
                 <div class="col-md-12">
                   <div class="mb-3">
-                    <textarea class="form-control" rows="6">I am interested in a price quote on this vehicle. Please contact me at your earliest convenience with your best price for this vehicle.</textarea>
+                    <textarea class="form-control" rows="6"></textarea>
                   </div>
                   <button type="submit" class="btn btn-block btn-thm mt10 mb20">Book Now</button>
                   <button type="submit" class="btn btn-block btn-whatsapp mb0"><span class="flaticon-whatsapp mr10 text-white"></span>WhatsApp</button>
