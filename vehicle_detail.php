@@ -270,8 +270,11 @@ foreach($results as $result)
                   <div class="mb-3">
                     <textarea class="form-control" rows="6"></textarea>
                   </div>
+                  <?php if($email=$_SESSION['login']){ ?>
                   <button type="submit" class="btn btn-block btn-thm mt10 mb20">Book Now</button>
-                  <button type="submit" class="btn btn-block btn-whatsapp mb0"><span class="flaticon-whatsapp mr10 text-white"></span>WhatsApp</button>
+                  <?php } else { ?>
+                    <a href="index.php" class="btn btn-block btn-thm mt10 mb20">Login To Book</a>
+                    <?php } ?>
                 </div>
               </div>
             </form>
