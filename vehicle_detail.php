@@ -249,26 +249,24 @@ foreach($results as $result)
           <div class="sidebar_seller_contact">
             
             <h4 class="mb30">Contact Seller</h4>
-            <form action="#">
+            <form method="post">
               <div class="row">
                 <div class="col-lg-12">
                   <div class="mb-3">
-                    <input class="form-control form_control" type="text" placeholder="Name">
+                    <label for="Start date">Start Date</label>
+                    <input name="fromdate" class="form-control form_control" type="date" required>
                   </div>
                 </div>
                 <div class="col-lg-12">
-                  <div class="mb-3">
-                    <input class="form-control form_control" type="text" placeholder="Phone">
+                <div class="mb-3">
+                    <label for="Start date">End Date</label>
+                    <input name="todate" class="form-control form_control" type="date" required>
                   </div>
                 </div>
-                <div class="col-lg-12">
-                  <div class="mb-3">
-                    <input class="form-control form_control" type="email" placeholder="Email">
-                  </div>
-                </div>
+                
                 <div class="col-md-12">
                   <div class="mb-3">
-                    <textarea class="form-control" rows="6"></textarea>
+                    <textarea class="form-control" rows="6" name="message" placeholder="Message" required></textarea>
                   </div>
                   <?php if($email=$_SESSION['login']){ ?>
                   <button type="submit" class="btn btn-block btn-thm mt10 mb20">Book Now</button>
