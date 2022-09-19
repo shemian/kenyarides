@@ -484,12 +484,13 @@ error_reporting(0);
                     <div class="car-listing">
                       <div class="thumb">
                         <div class="tag">FEATURED</div>
-                        <img src="image/vehicleimages/<?php echo htmlentities($result->Vehimg);?>" alt="1.jpg">
+                        <a href="vehicle_detail.php?vhid=<?php echo htmlentities($result->id);?>"><img src="image/vehicleimages/<?php echo htmlentities($result->Vehimg);?>"  alt="1.jpg"></a>
+                        
                       </div>
                       <div class="details">
                         <div class="wrapper">
-                          <h5 class="price">$<?php echo htmlentities($result->PricePerDay);?></h5>
-                          <h6 class="title"><a href=""></a><?php echo htmlentities($result->VehiclesTitle);?> - <span><?php echo htmlentities($result->Vehbrand);?></span></h6>
+                          <h5 class="price">ksh <?php echo htmlentities($result->PricePerDay);?></h5>
+                          <h6 class="title"><a href="vehicle_detail.php?vhid=<?php echo htmlentities($result->id);?>"><?php echo htmlentities($result->VehiclesTitle);?> - <span><?php echo htmlentities($result->Vehbrand);?></a></span></h6>
                           
                         </div>
                         <div class="listing_footer">
