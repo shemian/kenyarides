@@ -37,8 +37,6 @@ if(strlen($email = $_SESSION['login'])){
     if(isset($_POST['passengerairbag'])) $passengerairbag= $_POST['passengerairbag'];
     $powerwindow="";
     if(isset($_POST['powerwindow'])) $powerwindow = $_POST['powerwindow'];
-    $cdplayer="";
-    if(isset($_POST['cdplayer'])) $cdplayer = $_POST['cdplayer'];
     $centrallocking="";
     if(isset($_POST['centrallocking'])) $centrallocking = $_POST['centrallocking'];
     $crashcensor="";
@@ -252,10 +250,6 @@ if(strlen($email = $_SESSION['login'])){
                                                             <input type="checkbox" class="custom-control-input" id="brakeassist" name="brakeassist" value="1">
                                                             <label class="custom-control-label" for="brakeassist">Break Assist</label>
                                                         </div>
-                                                        <div class="df mb20">
-                                                            <input type="checkbox" class="custom-control-input" id="cdplayer" name="cdplayer" value="1">
-                                                            <label class="custom-control-label" for="cdplayer">CD Player</label>
-                                                        </div><!-- to be removed -->
                                                         <div class="df">
                                                             <input type="checkbox" class="custom-control-input" id="powersteering" name="powersteering" value="1">
                                                             <label class="custom-control-label" for="powersteering">Power Steering </label>
