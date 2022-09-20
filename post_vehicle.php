@@ -1,6 +1,6 @@
 <?php 
 session_start();
-// error_reporting(0);
+error_reporting(0);
 include('includes/config.php');
 if(strlen($email = $_SESSION['login'])){
     include('user_filter.php');
@@ -46,7 +46,7 @@ if(strlen($email = $_SESSION['login'])){
    
     move_uploaded_file($_FILES["img"]["tmp_name"],"image/vehicleimages/".$_FILES["img"]["name"]);
 
-    $sql="INSERT INTO tblvehicles(VehiclesTitle,user_id,Vehbrand,Vehcondition,VehiclesOverview,PricePerDay,FuelType,ModelYear,SeatingCapacity,Vehimg,AirConditioner,PowerDoorLocks,AntiLockBrakingSystem,BrakeAssist,PowerSteering,DriverAirbag,PassengerAirbag,PowerWindows,CentralLocking,CrashSensor,LeatherSeats,CDPlayer) VALUES(:vehicletitle,:user_id,:vehbrand,:vehcondition,:vehicleoverview,:priceperday,:fueltype,:modelyear,:seatingcapacity,:img,:airconditioner,:powerdoorlocks,:antilockbrakingsys,:brakeassist,:powersteering,:driverairbag,:passengerairbag,:powerwindow,:centrallocking,:crashcensor,:leatherseats,:cdplayer)";
+    $sql="INSERT INTO tblvehicles(VehiclesTitle,user_id,Vehbrand,Vehcondition,VehiclesOverview,PricePerDay,FuelType,ModelYear,SeatingCapacity,Vehimg,AirConditioner,PowerDoorLocks,AntiLockBrakingSystem,BrakeAssist,PowerSteering,DriverAirbag,PassengerAirbag,PowerWindows,CentralLocking,CrashSensor,LeatherSeats) VALUES(:vehicletitle,:user_id,:vehbrand,:vehcondition,:vehicleoverview,:priceperday,:fueltype,:modelyear,:seatingcapacity,:img,:airconditioner,:powerdoorlocks,:antilockbrakingsys,:brakeassist,:powersteering,:driverairbag,:passengerairbag,:powerwindow,:centrallocking,:crashcensor,:leatherseats)";
     $query = $dbh->prepare($sql);
     $query->bindParam(':vehicletitle',$vehicletitle,PDO::PARAM_STR);
     $query->bindParam(':user_id',$user_id,PDO::PARAM_STR);
@@ -69,7 +69,6 @@ if(strlen($email = $_SESSION['login'])){
     $query->bindParam(':centrallocking',$centrallocking,PDO::PARAM_STR);
     $query->bindParam(':crashcensor',$crashcensor,PDO::PARAM_STR);
     $query->bindParam(':leatherseats',$leatherseats,PDO::PARAM_STR);
-    $query->bindParam(':cdplayer',$cdplayer,PDO::PARAM_STR);
     $query->execute();
     $lastInsertId = $dbh->lastInsertId();
     if($lastInsertId)
@@ -145,6 +144,9 @@ if(strlen($email = $_SESSION['login'])){
                         <div class="col-lg-12">
                             <div class="new_property_form">
                                 <h4 class="title mb30">Additional</h4>
+                                <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php }
+                                else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
+                                <div class="panel-body">
                                 <form method="post" class="contact_form" name="contact_form" action="post_vehicle.php" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-12">
@@ -305,30 +307,8 @@ if(strlen($email = $_SESSION['login'])){
                                                 <div class="col-lg-12">
                                                     <label class="form-label">Featured Image</label>
                                                     <ul class="mb0 mt10">
-                                                        <li class="list-inline-item">
-                                                            <div class="portfolio_item">
-                                                                <img class="img-fluid" src="images/listing/a1.jpg" alt="a1.jpg">
-                                                                <div class="edu_stats_list" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete">
-                                                                    <a href="#"><span>X</span></a>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <div class="portfolio_item">
-                                                                <img class="img-fluid" src="images/listing/a2.jpg" alt="a2.jpg">
-                                                                <div class="edu_stats_list" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete">
-                                                                    <a href="#"><span>X</span></a>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <div class="portfolio_item">
-                                                                <img class="img-fluid" src="images/listing/a3.jpg" alt="a3.jpg">
-                                                                <div class="edu_stats_list" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete">
-                                                                    <a href="#"><span>X</span></a>
-                                                                </div>
-                                                            </div>
-                                                        </li>
+                                                      
+                                                      
                                                         <li class="list-inline-item vat">
                                                             <div class="upload_file_input_add_remove style-right mb30-sm">
                                                                 <span class="btn_upload">
