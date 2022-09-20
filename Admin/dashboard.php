@@ -2,7 +2,11 @@
 session_start();
 error_reporting(0);
 include('includes/config.php');
-
+if(strlen($_SESSION['alogin'])==0)
+	{	
+header('location:index.php');
+}
+else{
 
 
 ?>
@@ -92,12 +96,11 @@ include('includes/config.php');
                
             </div>
         </div>
-        <!-- Bootstrap core JS-->
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
    
 </div>
 
-<!-- Wrapper End --> 
 <script src="../js/jquery-3.6.0.js"></script> 
 <script src="../js/jquery-migrate-3.0.0.min.js"></script> 
 <script src="../js/popper.min.js"></script> 
@@ -116,10 +119,8 @@ include('includes/config.php');
 <script src="../js/progressbar.js"></script> 
 <script src="../js/slider.js"></script>
 <script src="../js/timepicker.js"></script> 
-<script src="../js/wow.min.js"></script> 
-<!-- Custom script for all pages --> 
+<script src="../js/wow.min.js"></script>  
 <script src="../js/script.js"></script>
 </body>
-
-<!-- Mirrored from creativelayers.net/themes/voiture-html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 21:12:54 GMT -->
 </html>
+<?php } ?>

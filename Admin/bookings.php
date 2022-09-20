@@ -5,11 +5,11 @@ include('includes/config.php');
 include('../Enums/BookingStatus.php');
 include('../includes/updateBooking.php');
 
-// if(strlen($_SESSION['alogin'])==0)
-// 	{	
-// header('location:index.php');
-// }
-// else{
+if(strlen($_SESSION['alogin'])==0)
+	{	
+header('location:index.php');
+}
+else{
 	
 
 
@@ -174,12 +174,10 @@ else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlen
                 
             </div>
     </div>
-        <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
    
 </div>
 
-<!-- Wrapper End --> 
 <script src="../js/jquery-3.6.0.js"></script> 
 <script src="../js/jquery-migrate-3.0.0.min.js"></script> 
 <script src="../js/popper.min.js"></script> 
@@ -202,3 +200,4 @@ else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlen
 <script src="../js/script.js"></script>
 </body>
 </html>
+<?php } ?>

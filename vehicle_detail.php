@@ -351,9 +351,6 @@ foreach($results as $result)
 <script src="js/timepicker.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAz77U5XQuEME6TpftaMdX0bBelQxXRlM&amp;callback=initMap"></script>
 <script src="js/googlemaps1.js"></script>
-<!-- Custom script for all pages --> 
 <script src="js/script.js"></script>
 </body>
-
-<!-- Mirrored from creativelayers.net/themes/voiture-html/page-car-single-v1.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 21:13:54 GMT -->
 </html>

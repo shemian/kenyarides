@@ -104,9 +104,6 @@ echo "<script type='text/javascript'> document.location = 'dashboard.php'; </scr
 <script src="../js/timepicker.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAz77U5XQuEME6TpftaMdX0bBelQxXRlM&amp;callback=initMap"></script>
 <script src="../js/googlemaps1.js"></script>
-<!-- Custom script for all pages --> 
 <script src="../js/script.js"></script>
 </body>
-
-<!-- Mirrored from creativelayers.net/themes/voiture-html/page-contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 21:14:33 GMT -->
 </html>

@@ -230,7 +230,7 @@ foreach($results as $result)
 	</section>
 <a class="scrollToHome" href="#"><i class="fas fa-arrow-up"></i></a>
 </div>
-<!-- Wrapper End -->
+
 <script src="js/jquery-3.6.0.js"></script>
 <script src="js/jquery-migrate-3.0.0.min.js"></script>
 <script src="js/popper.min.js"></script>
@@ -251,10 +251,7 @@ foreach($results as $result)
 <script src="js/wow.min.js"></script>
 <script src="js/smartuploader.js"></script>
 <script src="js/dashboard-script.js"></script>
-<!-- Custom script for all pages --> 
 <script src="js/script.js"></script>
 </body>
-
-<!-- Mirrored from creativelayers.net/themes/voiture-html/page-dashboard-profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 21:13:41 GMT -->
 </html>
 <?php } ?>

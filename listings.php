@@ -353,7 +353,8 @@ error_reporting(0);
 
 <a class="scrollToHome" href="#"><i class="fas fa-arrow-up"></i></a>
 </div>
-<!-- Wrapper End -->
+
+
 <script src="js/jquery-3.6.0.js"></script>
 <script src="js/jquery-migrate-3.0.0.min.js"></script>
 <script src="js/popper.min.js"></script>
@@ -371,10 +372,7 @@ error_reporting(0);
 <script src="js/progressbar.js"></script>
 <script src="js/slider.js"></script>
 <script src="js/pricing-slider.js"></script>
-<script src="js/timepicker.js"></script>
-<!-- Custom script for all pages --> 
+<script src="js/timepicker.js"></script> 
 <script src="js/script.js"></script>
 </body>
-
-<!-- Mirrored from creativelayers.net/themes/voiture-html/page-list-v1.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 21:13:48 GMT -->
 </html>

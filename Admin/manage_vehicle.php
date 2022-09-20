@@ -3,6 +3,11 @@
 session_start();
 error_reporting(0);
 include('includes/config.php');
+if(strlen($_SESSION['alogin'])==0)
+	{	
+header('location:index.php');
+}
+else{
 
 if(isset($_REQUEST['del']))
 	{
@@ -53,7 +58,7 @@ $msg="Vehicle  record deleted successfully";
 
 						<h2 class="page-title">Manage Vehicles</h2>
 
-						<!-- Zero Configuration Table -->
+						
 						<div class="panel panel-default">
 							<div class="panel-heading">Vehicle Details</div>
 							<div class="panel-body">
@@ -128,7 +133,6 @@ foreach($results as $result)
    
 </div>
 
-<!-- Wrapper End --> 
 <script src="../js/jquery-3.6.0.js"></script> 
 <script src="../js/jquery-migrate-3.0.0.min.js"></script> 
 <script src="../js/popper.min.js"></script> 
@@ -151,3 +155,4 @@ foreach($results as $result)
 <script src="../js/script.js"></script>
 </body>
 </html>
+<?php } ?>

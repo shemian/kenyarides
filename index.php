@@ -202,7 +202,7 @@ error_reporting(0);
       <div class="row mt20">
         <div class="col-lg-12">
           <div class="text-center">
-            <a href="page-list-v1.html" class="more_listing">Show All Cars <span class="icon"><span class="fas fa-plus"></span></span></a>
+            <a href="listings.php" class="more_listing">Show All Cars <span class="icon"><span class="fas fa-plus"></span></span></a>
           </div>
         </div>
       </div>
@@ -215,7 +215,7 @@ error_reporting(0);
   <?php include('includes/footer.php') ?>
   <a class="scrollToHome" href="#"><i class="fas fa-arrow-up"></i></a>
 </div>
-<!-- Wrapper End --> 
+
 <script src="js/jquery-3.6.0.js"></script> 
 <script src="js/jquery-migrate-3.0.0.min.js"></script> 
 <script src="js/popper.min.js"></script> 
@@ -235,9 +235,6 @@ error_reporting(0);
 <script src="js/slider.js"></script>
 <script src="js/timepicker.js"></script> 
 <script src="js/wow.min.js"></script> 
-<!-- Custom script for all pages --> 
 <script src="js/script.js"></script>
 </body>
-
-<!-- Mirrored from creativelayers.net/themes/voiture-html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 21:12:54 GMT -->
 </html>
