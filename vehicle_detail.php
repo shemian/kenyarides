@@ -3,6 +3,35 @@ session_start();
 include('includes/config.php');
 error_reporting(0);
 
+if(isset($_POST['submit']))
+{
+$fromdate=$_POST['fromdate'];
+$todate=$_POST['todate']; 
+$message=$_POST['message'];
+$useremail=$_SESSION['login'];
+$status=0;
+$vhid=$_GET['vhid'];
+$sql="INSERT INTO  tblbooking(userEmail,VehicleId,FromDate,ToDate,message,Status) VALUES(:useremail,:vhid,:fromdate,:todate,:message,:status)";
+$query = $dbh->prepare($sql);
+$query->bindParam(':useremail',$useremail,PDO::PARAM_STR);
+$query->bindParam(':vhid',$vhid,PDO::PARAM_STR);
+$query->bindParam(':fromdate',$fromdate,PDO::PARAM_STR);
+$query->bindParam(':todate',$todate,PDO::PARAM_STR);
+$query->bindParam(':message',$message,PDO::PARAM_STR);
+$query->bindParam(':status',$status,PDO::PARAM_STR);
+$query->execute();
+$lastInsertId = $dbh->lastInsertId();
+if($lastInsertId)
+{
+echo "<script>alert('Booking successfull.');</script>";
+}
+else 
+{
+echo "<script>alert('Something went wrong. Please try again');</script>";
+}
+
+}
+
 ?>
 
 
@@ -247,7 +276,18 @@ foreach($results as $result)
         <div class="col-lg-4 col-xl-4">
           
           <div class="sidebar_seller_contact">
-            
+          <?php
+
+            $Is_Booked= $results[0]->Is_booked;
+            if($Is_Booked){
+          ?>
+            <div class="widget_heading">
+              <h5><i class="" aria-hidden="true"></i>Vehicle Not available</h5>
+              <a href="index.php" class="btn btn-block btn-thm mt10 mb20">View Realated Vehicles</a>
+   
+            </div>
+            <?php } else{?>
+
             <h4 class="mb30">Contact Seller</h4>
             <form method="post">
               <div class="row">
@@ -269,13 +309,14 @@ foreach($results as $result)
                     <textarea class="form-control" rows="6" name="message" placeholder="Message" required></textarea>
                   </div>
                   <?php if($email=$_SESSION['login']){ ?>
-                  <button type="submit" class="btn btn-block btn-thm mt10 mb20">Book Now</button>
+                  <input type="submit" class="btn btn-block btn-thm mt10 mb20"  name="submit" value="Book Now">
                   <?php } else { ?>
                     <a href="index.php" class="btn btn-block btn-thm mt10 mb20">Login To Book</a>
                     <?php } ?>
                 </div>
               </div>
             </form>
+            <?php }?>
           </div>
         </div>
       </div>
