@@ -57,7 +57,7 @@ include('includes/config.php');
 											<th>Email </th>
 											<th>Contact no</th>
 											<th>Reg Date</th>
-                                            <th>Action</th>
+                                           
 										</tr>
 									</thead>
 									<tfoot>
@@ -69,7 +69,7 @@ include('includes/config.php');
 											
 											<th>Reg Date</th>
                                            
-                                            <th>Action</th>
+                                          
 										</tr>
 										</tr>
 									</tfoot>
@@ -93,9 +93,7 @@ include('includes/config.php');
 	                                        
 											<td><?php echo htmlentities($result->RegDate);?></td>
 											
-											<td><a href="reg-users.php?aeid=<?php echo htmlentities($result->id);?>" onclick="return confirm('Do you really Want to View the user')"> View</a> /
-											<a href="reg-users.php?eid=<?php echo htmlentities($result->id);?>" onclick="return confirm('Do you really want to Delete The user')"> Delete</a>
-											</td>
+											
 
 										</tr>
 										<?php $cnt=$cnt+1; }} ?>

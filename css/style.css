@@ -5010,7 +5010,7 @@ form.listing_page_v9{
   width: 100%;
 }
 .listing-home-bg{
-  background-image: url(../images/home/1.jpg);
+  background-image: url(../images/home/11.jpg);
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
@@ -8396,7 +8396,7 @@ form.listing_page_v9{
 }
 /*== Inner Pages Breadcrumb ==*/
 .inner_page_breadcrumb {
-  background-image: url(../images/background/inner-pagebg.jpg);
+  background-image: url(../images/background/inner-pagebg1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 90px 0;
@@ -17531,7 +17531,7 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus-visible,
   background-repeat: no-repeat;
 }
 .bg-home1{
-  background-image: url(../images/home/1.jpg);
+  background-image: url(../images/home/11.jpg);
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
