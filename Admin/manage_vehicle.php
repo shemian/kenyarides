@@ -148,9 +148,6 @@ foreach($results as $result)
 <script src="../js/slider.js"></script>
 <script src="../js/timepicker.js"></script> 
 <script src="../js/wow.min.js"></script> 
-<!-- Custom script for all pages --> 
 <script src="../js/script.js"></script>
 </body>
-
-<!-- Mirrored from creativelayers.net/themes/voiture-html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 21:12:54 GMT -->
 </html>
