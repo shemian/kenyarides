@@ -14,10 +14,7 @@
         <div class="col-lg-4 col-xl-5">
           <div class="header_top_social_widgets text-center text-md-end">
             <ul class="m0">
-              <li class="list-inline-item"><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-              <li class="list-inline-item"><a href="#"><span class="fab fa-twitter"></span></a></li>
-              <li class="list-inline-item"><a href="#"><span class="fab fa-instagram"></span></a></li>
-              <li class="list-inline-item"><a href="#"><span class="fab fa-linkedin"></span></a></li>
+
               <?php  if($_SESSION['login']){?>
                 <!-- <li class="list-inline-item"><a href="#loginform" data-bs-toggle="modal" data-bs-target="#logInModal">Logged In </a></li> -->
                 <?php } else { ?>

@@ -4,18 +4,7 @@
         <div class="col-md-4 col-xl-7">
          
         </div>
-        <div class="col-md-8 col-xl-5">
-          <div class="footer_menu_widget text-start text-md-end mt15">
-            <ul>
-              <li class="list-inline-item"><a href="#">Home</a></li>
-              <li class="list-inline-item"><a href="#">Explore</a></li>
-              <li class="list-inline-item"><a href="#">Listings</a></li>
-              <li class="list-inline-item"><a href="#">Blog</a></li>
-              <li class="list-inline-item"><a href="#">Shop</a></li>
-              <li class="list-inline-item"><a href="#">Pages</a></li>
-            </ul>
-          </div>
-        </div>
+     
       </div>
     </div>
     <hr>
