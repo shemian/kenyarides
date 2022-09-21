@@ -36,220 +36,51 @@ error_reporting(0);
   <!-- Inner Page Breadcrumb -->
   <section class="advance_search_menu_sectn bgc-thm2 pt20 pb0 mt70-992">
     <div class="container">
+    <form action="search.php" method="post">
       <div class="row">
+     
         <div class="col col-sm-4 col-lg-2">
           <div class="advance_search_style">
-            <select class="selectpicker show-tick">
-              <option>Condition</option>
-              <option>Most Recent</option>
-              <option>Recent</option>
-              <option>Best Selling</option>
-              <option>Old Review</option>
+            <select class="selectpicker show-tick" name="vehcondition">
+                <option>Condition</option>
+                <option data-tokens="New" value="New">New</option>
+                <option data-tokens="Used" value="Used">Used</option>
             </select>
           </div>
         </div>
         <div class="col col-sm-4 col-lg-2">
           <div class="advance_search_style">
-            <select class="selectpicker show-tick">
-              <option>Select Makes</option>
-              <option>Audi</option>
-              <option>Bentley</option>
-              <option>BMW</option>
-              <option>Ford</option>
-              <option>Honda</option>
-              <option>Mercedes</option>
+            <select class="selectpicker show-tick" name="vehbrand">
+                <option>Brand</option>
+                <option data-tokens="Audi" value="Audi">Audi</option>
+                <option data-tokens="Bentley" value="Bentley">Bentley</option>
+                <option data-tokens="BMW" value="BMW">BMW</option>
+                <option data-tokens="Ford" value="Ford">Ford</option>
+                <option data-tokens="Honda" value="Honda">Honda</option>
+                <option data-tokens="Mercedes" value="Mercedes">Mercedes</option>
             </select>
           </div>
         </div>
         <div class="col col-sm-4 col-lg-2">
           <div class="advance_search_style">
-            <select class="selectpicker show-tick">
-              <option>Select Models</option>
-              <option>A3 Sportback</option>
-              <option>A4</option>
-              <option>A6</option>
-              <option>Q5</option>
-            </select>
-          </div>
-        </div>
-        <div class="col col-sm-4 col-lg-2">
-          <div class="advance_search_style">
-            <select class="selectpicker show-tick">
-              <option>Select Type</option>
-              <option>Convertible</option>
-              <option>Coupe</option>
-              <option>Hatchback</option>
-              <option>Sedan</option>
-              <option>SUV</option>
-            </select>
-          </div>
-        </div>
-        <div class="col col-sm-4 col-lg-2">
-          <div class="advance_search_style">
-            <a class="advance_dd_btn" href="#collapseAdvanceSearch" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseAdvanceSearch"><span class="flaticon-cogwheel"></span> Advanced</a>
-          </div>
-        </div>
-        <div class="col col-sm-4 col-lg-2">
-          <div class="advance_search_style">
-            <a class="btn search_btn btn-thm" href="#"><span class="flaticon-magnifiying-glass"></span> Search</a>
-          </div>
-        </div>
-      </div>
-      <div class="collapse" id="collapseAdvanceSearch">
-        <div class="row bgc-thm2">
-          <div class="col col-sm-4 col-lg-2">
-            <div class="advance_search_style">
-              <select class="selectpicker show-tick">
-                <option>Year</option>
-                <option>1967</option>
-                <option>1990</option>
-                <option>2000</option>
-                <option>2002</option>
-                <option>2005</option>
-                <option>2010</option>
-                <option>2015</option>
-                <option>2020</option>
-              </select>
-            </div>
-          </div>
-          <div class="col col-sm-4 col-lg-2">
-            <div class="advance_search_style">
-              <input class="form-control form_control" type="text" placeholder="Min. Mileage">
-            </div>
-          </div>
-          <div class="col col-sm-4 col-lg-2">
-            <div class="advance_search_style">
-              <input class="form-control form_control" type="text" placeholder="Max. Mileage">
-            </div>
-          </div>
-          <div class="col col-sm-4 col-lg-2">
-            <div class="advance_search_style">
-              <select class="selectpicker show-tick">
+            <select class="selectpicker show-tick" name="fueltype">
+ 
                 <option>Fuel Type</option>
-                <option>Diesel</option>
-                <option>Electric</option>
-                <option>Hybrid</option>
-                <option>Petrol</option>
-              </select>
-            </div>
-          </div>
-          <div class="col col-sm-4 col-lg-2">
-            <div class="advance_search_style">
-              <select class="selectpicker show-tick">
-                <option>Transmission</option>
-                <option>Autometic</option>
-                <option>Manual</option>
-                <option>Semi-Autometic</option>
-              </select>
-            </div>
-          </div>
-          <div class="col col-sm-4 col-lg-2">
-            <div class="advance_search_style">
-              <select class="selectpicker show-tick">
-                <option>Doors</option>
-                <option>2 Doors</option>
-                <option>3 Doors</option>
-                <option>4 Doors</option>
-                <option>5 Doors</option>
-              </select>
-            </div>
+                <option data-tokens="Diesel" value="Diesel">Diesel</option>
+                <option data-tokens="Electric" value="Electric">Electric</option>
+                <option data-tokens="Petrol" value="Petrol">Petrol</option>
+            </select>
           </div>
         </div>
-        <div class="row">
-          <div class="col col-sm-4 col-lg-2">
-            <div class="advance_search_style">
-              <select class="selectpicker show-tick">
-                <option>Interior Color</option>
-                <option>Black</option>
-                <option>Beige</option>
-                <option>Brown</option>
-                <option>Red</option>
-              </select>
-            </div>
-          </div>
-          <div class="col col-sm-4 col-lg-2">
-            <div class="advance_search_style">
-              <select class="selectpicker show-tick">
-                <option>Exterior Color</option>
-                <option>Black</option>
-                <option>Beige</option>
-                <option>Brown</option>
-                <option>Red</option>
-              </select>
-            </div>
-          </div>
-          <div class="col col-sm-4 col-lg-2">
-            <div class="advance_search_style">
-              <select class="selectpicker show-tick">
-                <option>Cylinders</option>
-                <option>4</option>
-                <option>6</option>
-                <option>8</option>
-              </select>
-            </div>
-          </div>
-          <div class="col col-sm-4 col-lg-2">
-            <div class="advance_search_style">
-              <select class="selectpicker show-tick">
-                <option>Listing Status</option>
-                <option>Active</option>
-                <option>Pending</option>
-                <option>Disable</option>
-              </select>
-            </div>
-          </div>
-          <div class="col col-sm-4 col-lg-2">
-            <div class="advance_search_style">
-              <input class="form-control form_control" type="text" placeholder="VIN number">
-            </div>
+
+        <div class="col col-sm-4 col-lg-2">
+          <div class="advance_search_style">
+            <button class="btn search_btn btn-thm" type="submit" ><span class="flaticon-magnifiying-glass"></span> Search</button>
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="advance_search_style">
-              <div class="uilayout_range">
-                <h6 class="ass_price_title text-white text-start">Price</h6>
-                <div id="slider"></div>
-                <span id="slider-range-value1"></span>
-                <span id="slider-range-value2"></span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="advance_search_style">
-              <div class="ui_kit_checkbox text-start">
-                <h6 class="ass_feature_title text-white">Features</h6>
-                <div class="df mb20">
-                  <input type="checkbox" class="custom-control-input" id="customCheck1">
-                  <label class="custom-control-label" for="customCheck1">Adaptive Cruise Control (6,676)</label>
-                </div>
-                <div class="df mb20">
-                  <input type="checkbox" class="custom-control-input" id="customCheck2">
-                  <label class="custom-control-label" for="customCheck2">Cooled Seats (9,784)</label>
-                </div>
-                <div class="df mb20">
-                  <input type="checkbox" class="custom-control-input" id="customCheck3">
-                  <label class="custom-control-label" for="customCheck3">Keyless Start (9,784)</label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="advance_search_style">
-              <div class="ui_kit_checkbox text-start pt40 pt0-sm">
-                <div class="df mb20">
-                  <input type="checkbox" class="custom-control-input" id="customCheck4">
-                  <label class="custom-control-label" for="customCheck4">Navigation System (9,784)</label>
-                </div>
-                <div class="df mb20">
-                  <input type="checkbox" class="custom-control-input" id="customCheck5">
-                  <label class="custom-control-label" for="customCheck5">Remote Start (9,784)</label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    
       </div>
+      </form>
     </div>
   </section>
 
@@ -300,42 +131,22 @@ error_reporting(0);
         <div class="col-sm-6 col-lg-4 col-xl-3">
           <div class="car-listing">
             <div class="thumb">
-              <div class="tag">FEATURED</div>
+              <div class="tag"><?php echo htmlentities($result->Vehcondition);?></div>
               <img src="image/vehicleimages/<?php echo htmlentities($result->Vehimg);?>"  alt="1.jpg">
-              <div class="thmb_cntnt2">
-                <ul class="mb0">
-                  <li class="list-inline-item"><a class="text-white" href="#"><span class="flaticon-photo-camera mr3"></span> 22</a></li>
-                  <li class="list-inline-item"><a class="text-white" href="#"><span class="flaticon-play-button mr3"></span> 3</a></li>
-                </ul>
-              </div>
-              <div class="thmb_cntnt3">
-                <ul class="mb0">
-                  <li class="list-inline-item"><a href="#"><span class="flaticon-shuffle-arrows"></span></a></li>
-                  <li class="list-inline-item"><a href="#"><span class="flaticon-heart"></span></a></li>
-                </ul>
-              </div>
+              
+             
             </div>
             <div class="details">
               <div class="wrapper">
                 <h5 class="price">Ksh <?php echo htmlentities($result->PricePerDay);?></h5>
-                <h6 class="title"><a href="page-car-single-v1.html"><?php echo htmlentities($result->VehiclesTitle);?></a></h6>
-                <div class="listign_review">
-                  <ul class="mb0">
-                    <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                    <li class="list-inline-item"><a href="#">4.7</a></li>
-                    <li class="list-inline-item">(684 reviews)</li>
-                  </ul>
-                </div>
+                <h6 class="title"><a href="page-car-single-v1.html"><?php echo htmlentities($result->VehiclesTitle);?>- <span><?php echo htmlentities($result->Vehbrand);?></a></span></a></h6>
+  
               </div>
                         <div class="listing_footer">
-                          <ul class="mb0">
-                            <li class="list-inline-item"><a href="#"><span class="flaticon-road-perspective me-2"></span>77362</a></li>
-                            <li class="list-inline-item"><a href="#"><span class="flaticon-gas-station me-2"></span>Diesel</a></li>
-                            <li class="list-inline-item"><a href="#"><span class="flaticon-gear me-2"></span>Automatic</a></li>
+                        <ul class="mb0">
+                            <li class="list-inline-item"><a href="#"><span class="fa fa-chair me-2"></span><?php echo htmlentities($result->SeatingCapacity);?></a></li>
+                            <li class="list-inline-item"><a href="#"><span class="flaticon-gas-station me-2"></span><?php echo htmlentities($result->FuelType);?></a></li>
+                            <li class="list-inline-item"><a href="#"><span class="flaticon-gear me-2"></span><?php echo htmlentities($result->ModelYear);?></a></li>
                           </ul>
                         </div>
             </div>
