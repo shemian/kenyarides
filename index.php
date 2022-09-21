@@ -142,9 +142,7 @@ error_reporting(0);
           <div class="popular_listing_sliders row">
             <!-- Nav tabs -->
             <div class="nav nav-tabs col-lg-12 justify-content-center" role="tablist">
-              <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">All Status</button>
-              <button class="nav-link" id="nav-shopping-tab" data-bs-toggle="tab" data-bs-target="#nav-shopping" role="tab" aria-controls="nav-shopping" aria-selected="false">New Cars</button>
-              <button class="nav-link" id="nav-hotels-tab" data-bs-toggle="tab" data-bs-target="#nav-hotels" role="tab" aria-controls="nav-hotels" aria-selected="false">Used Cars</button>
+              <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">All Vehicles</button>
             </div>
             <!-- Tab panes -->
             <div class="tab-content col-lg-12" id="nav-tabContent">
@@ -166,7 +164,7 @@ error_reporting(0);
                  
                     <div class="car-listing">
                       <div class="thumb">
-                        <div class="tag">FEATURED</div>
+                        <div class="tag"><?php echo htmlentities($result->Vehcondition);?></div>
                         <a href="vehicle_detail.php?vhid=<?php echo htmlentities($result->id);?>"><img src="image/vehicleimages/<?php echo htmlentities($result->Vehimg);?>"  alt="1.jpg"></a>
                         
                       </div>
