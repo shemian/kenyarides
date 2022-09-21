@@ -17531,12 +17531,13 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus-visible,
   background-repeat: no-repeat;
 }
 .bg-home1{
-  background-image: url(../images/home/11.jpg);
+  background-image: url(../images/home/bg.jpg);
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
   height: 800px;
 }
+
 .bg-home2{
   background-image: url(../images/home/2.jpg);
   -webkit-background-size: cover;

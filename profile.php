@@ -97,11 +97,6 @@ $error="Your current password is wrong";
   <header class="header-nav menu_style_home_one home3_style main-menu">
   <?php  include('includes/navbar.php') ?>
   </header>
-
-
-  
- v>
-
 	<!-- Our Dashbord -->
 	<section class="our-dashbord dashbord bgc-f9">
 		<div class="container-fluid">

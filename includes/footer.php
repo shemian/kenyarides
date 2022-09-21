@@ -19,7 +19,7 @@
         <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
           <div class="footer_contact_widget">
             <h5 class="title">NEED HELP</h5>
-            <div class="footer_phone">+254 7450 241 08</div>
+            <div class="footer_phone">+254 746 999 850</div>
            
           </div>
         </div>

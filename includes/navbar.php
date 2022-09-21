@@ -15,11 +15,11 @@
 				</a>
         <!-- Responsive Menu Structure-->
         <ul id="respMenu" class="ace-responsive-menu menu_list_custom_code wa text-end" data-menu-style="horizontal">
-          <li> <a href="index.php"><span class="title">Home</span></a></li>
-          <li> <a href="post_vehicle.php"><span class="title">List A car</span></a></li>
-          <li> <a href="listings.php"><span class="title">Listings</span></a></li>
+          <li> <a href="index.php"><span class="title" style="color:black;">Home</span></a></li>
+          <li> <a href="post_vehicle.php"><span class="title" style="color:black;">List A car</span></a></li>
+          <li> <a href="listings.php"><span class="title" style="color:black;">Listings</span></a></li>
          
-          <li> <a href="#"><span class="title">Contact Us</span></a></li>
+          <li> <a href="#"><span class="title" style="color:black;">Contact Us</span></a></li>
 
           
           <?php
@@ -38,10 +38,10 @@
             <li> <a href="#"  class="fa fa-user"><span class="title"><?php echo htmlentities( $result->FullName); }}?></span></a>
             <?php  if($_SESSION['login']){?>
               <ul>
-                <li><a href="profile.php">Profile</a></li>
-                <li><a href="user_listing.php">My Listing</a></li>
+                <li><a href="profile.php" style="color:black;">Profile</a></li>
+                <li><a href="user_listing.php" style="color:black;">My Listing</a></li>
                 <!-- <li><a href="#">My Bookings</a></li> -->
-                <li><a href="logout.php">Logout</a></li>
+                <li><a href="logout.php" style="color:black;">Logout</a></li>
               </ul>
               <?php } else { ?>
 
